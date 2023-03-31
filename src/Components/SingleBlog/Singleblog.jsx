@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SingleBlog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
@@ -6,8 +6,20 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 const Singleblog = (props) => {
     // console.log(props.blog.time);
     const { name, title, img, time, date, avatar } = props.blog;
-    const { handleTime } = props.handleTime;
-    console.log(props);
+    // const { handleTime } = props.handleTime;
+    // console.log(props);
+
+    const [count, setCount] = useState(0);
+
+    let prevtime = 0;
+    const handleTime = () => {
+        // for (let i in props.blog.time) {
+        //     console.log(i);
+        // }
+        // const newTime = count + props.blog.time;
+        console.log(props.blog.time);
+        
+    }
 
     return (
         <>
@@ -27,7 +39,7 @@ const Singleblog = (props) => {
                             </div>
                         </div>
                         <div>
-                            <p className='font-bold'>{time} min read            <button>
+                            <p className='font-bold'>{time} min read <button>
                                 <FontAwesomeIcon icon={faBookmark} />
                             </button>
                             </p>

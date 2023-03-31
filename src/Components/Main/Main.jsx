@@ -11,9 +11,9 @@ const Main = () => {
             .then(data => setBlogs(data))
     }, [])
 
-    const handleTime = () => {
-        console.log('time');
-    }
+    // const handleTime = () => {
+    //     console.log('get time');
+    // }
 
     return (
         <div>
@@ -21,7 +21,7 @@ const Main = () => {
                 blogs.map((blog) => (<Singleblog
                     key={blog.id}
                     blog={blog}
-                    handleTime={handleTime}
+                    // handleTime={handleTime}
                 ></Singleblog>))
             }
         </div>
