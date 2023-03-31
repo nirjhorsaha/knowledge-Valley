@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Main.css'
 import Singleblog from '../SingleBlog/Singleblog';
 
-const Main = () => {
+const Main = ({ setTime, setTitle }) => {
+
     const [blogs, setBlogs] = useState([]);
     
     useEffect(() => {
@@ -11,10 +12,6 @@ const Main = () => {
             .then(data => setBlogs(data))
     }, [])
 
-    // const handleTime = () => {
-    //     console.log('get time');
-    // }
-
     return (
         <div>
             {
@@ -22,6 +19,8 @@ const Main = () => {
                     key={blog.id}
                     blog={blog}
                     // handleTime={handleTime}
+                    setTime={setTime}
+                    setTitle={setTitle}
                 ></Singleblog>))
             }
         </div>

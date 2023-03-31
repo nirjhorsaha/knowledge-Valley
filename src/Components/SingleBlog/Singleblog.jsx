@@ -3,22 +3,16 @@ import './SingleBlog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
-const Singleblog = (props) => {
+const Singleblog = ({ blog, setTime, setTitle }) => {
     // console.log(props.blog.time);
-    const { name, title, img, time, date, avatar } = props.blog;
-    // const { handleTime } = props.handleTime;
-    // console.log(props);
+    const { name, title, img, time, date, avatar } = blog;
 
-    const [count, setCount] = useState(0);
+    const handleTime = (time) => {
+        setTime(time);
+    }
 
-    let prevtime = 0;
-    const handleTime = () => {
-        // for (let i in props.blog.time) {
-        //     console.log(i);
-        // }
-        // const newTime = count + props.blog.time;
-        console.log(props.blog.time);
-        
+    const handleTitles = (title) => {
+        setTitle(oldArray => [...oldArray, title])
     }
 
     return (
@@ -39,7 +33,7 @@ const Singleblog = (props) => {
                             </div>
                         </div>
                         <div>
-                            <p className='font-bold'>{time} min read <button>
+                            <p onClick={() => handleTitles(title)} className='font-bold'>{time} min read <button>
                                 <FontAwesomeIcon icon={faBookmark} />
                             </button>
                             </p>
@@ -48,7 +42,7 @@ const Singleblog = (props) => {
                     <h2 className='text-2xl'>{title}</h2>
                     <p className='font-bold'> #beginner #programming</p>
                     <div className="card-actions justify-start">
-                        <button onClick={handleTime} className='italic'>Mark as read</button>
+                        <button onClick={()=> handleTime(time)} className='italic'>Mark as read</button>
                     </div>
                 </div>
             </div>

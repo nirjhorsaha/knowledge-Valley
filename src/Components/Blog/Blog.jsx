@@ -5,16 +5,16 @@ const Blog = () => {
     return (
         <div className='blog'>
             <h1 className='text-center text-3xl my-4 rounded-3xl p-4 bg-blue-200 w-96 mx-auto'>FAQ</h1>
-            <div class="grid grid-rows-4 grid-flow-col gap-4 p-6">
+            <div className="grid grid-rows-4 grid-flow-col gap-4 p-6">
                 <div className='border-2 rounded-3xl w-full p-4'>
                     <h1 className='text-lg font-bold '># Props vs state</h1>
                     <p>Props is short for properties and they are used to pass data between React components. Data from props is read-only, and cannot be modified by a component that is receiving it from outside.
-                    And State is another special built-in object, which allows components to create and manage their own data. State data can be modified by its own component, but is private (cannot be accessed from outside)</p>
+                        And State is another special built-in object, which allows components to create and manage their own data. State data can be modified by its own component, but is private (cannot be accessed from outside)</p>
                 </div>
                 <div className='border-2 rounded-3xl w-full p-4'>
                     <h1 className='text-lg font-bold'># How does useState work?</h1>
                     <p>UseState is a react hook that allows to pass the initial state to this function, and it returns a variable with the current state value and another function to update this value. we can declare useState by const [state, setState] = useState(initialState);
-                    The useState hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these.
+                        The useState hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these.
                     </p>
                 </div>
                 <div className='border-2 rounded-3xl w-full p-4'>
