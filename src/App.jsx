@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './Components/Header/Header'
 import Blog from './Components/Blog/Blog'
-import Main from './Components/Main/Main'
 import HomePage from './Components/HomePage/HomePage'
 
 function App() {
