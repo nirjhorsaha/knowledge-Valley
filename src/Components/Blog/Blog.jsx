@@ -4,7 +4,7 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div className='blog'>
-            <h1 className='text-center text-3xl my-4 rounded-3xl p-4 bg-blue-200 w-96 mx-auto'>QA</h1>
+            <h1 className='text-center text-3xl my-4 rounded-3xl p-4 bg-blue-200 w-96 mx-auto'>FAQ</h1>
             <div class="grid grid-rows-4 grid-flow-col gap-4 p-6">
                 <div className='border-2 rounded-3xl w-full p-4'>
                     <h1 className='text-lg font-bold '># Props vs state</h1>

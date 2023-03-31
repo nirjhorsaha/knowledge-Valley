@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Singleblog = (props) => {
-    // console.log(props);
-    const {name,title, img, time, date,avatar } = props.blog;
+    // console.log(props.blog.time);
+    const { name, title, img, time, date, avatar } = props.blog;
+    const { handleTime } = props.handleTime;
+    console.log(props);
+
     return (
         <>
             <div className="card card-compact w-full md:w-11/12 bg-base-100 shadow-xl p-4 rounded-3xl mb-6 ">
@@ -18,20 +21,22 @@ const Singleblog = (props) => {
                                     <img src={avatar} />
                                 </div>
                             </label>
-                            <div>
+                            <div className='ms-2'>
                                 <h2 className="card-title text-lg">{name}</h2>
                                 <p>{date}</p>
                             </div>
                         </div>
                         <div>
-                            <p className='font-bold'>{time} min read <a href=""><FontAwesomeIcon icon={faBookmark} /></a>
+                            <p className='font-bold'>{time} min read            <button>
+                                <FontAwesomeIcon icon={faBookmark} />
+                            </button>
                             </p>
                         </div>
                     </div>
                     <h2 className='text-2xl'>{title}</h2>
                     <p className='font-bold'> #beginner #programming</p>
                     <div className="card-actions justify-start">
-                        <a href="" className='italic'>Mark as read</a>
+                        <button onClick={handleTime} className='italic'>Mark as read</button>
                     </div>
                 </div>
             </div>
