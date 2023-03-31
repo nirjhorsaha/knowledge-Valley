@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className='header'>
             <div className="navbar bg-base-100 p-4">
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-xl md:text-3xl ">Knowledge Valley</a>

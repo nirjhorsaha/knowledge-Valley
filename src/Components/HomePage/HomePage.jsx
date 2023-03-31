@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const HomePage = () => {
     return (
         <div className='p-4 m-4'>
-            <div className="main-container flex flex-wrap ">
+            <div className="main-container flex flex-wrap">
                 <div className="blog-container w-full md:w-2/3 ">
                     <Main></Main>
                 </div>

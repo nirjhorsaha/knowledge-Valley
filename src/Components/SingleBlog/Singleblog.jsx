@@ -7,8 +7,8 @@ const Singleblog = (props) => {
     // console.log(props);
     const {name,title, img, time, date,avatar } = props.blog;
     return (
-        <div>
-            <div className="card card-compact w-full md:w-5/6  bg-base-100 shadow-xl p-4 rounded-3xl mb-6">
+        <>
+            <div className="card card-compact w-full md:w-11/12 bg-base-100 shadow-xl p-4 rounded-3xl mb-6 ">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <div className='flex justify-between'>
@@ -35,7 +35,7 @@ const Singleblog = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

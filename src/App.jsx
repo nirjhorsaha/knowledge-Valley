@@ -6,7 +6,7 @@ import HomePage from './Components/HomePage/HomePage'
 function App() {
 
   return (
-    <div className="App">
+    <div className="App ">
       <Header></Header>
       <HomePage></HomePage>
       <Blog></Blog>
