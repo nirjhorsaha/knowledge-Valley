@@ -1,11 +1,12 @@
 import React from 'react';
+import './Header.css'
 
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 p-4">
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl">Knowledge Valley</a>
+                    <a className="btn btn-ghost normal-case text-xl md:text-3xl ">Knowledge Valley</a>
                 </div>
                 <div className="flex-none gap-2">
                     <div className="form-control">
@@ -30,6 +31,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <hr className='w-[95%] mx-auto'/>
         </div>
     );
 };
