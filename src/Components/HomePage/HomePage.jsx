@@ -5,9 +5,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const HomePage = () => {
     const [time, setTime] = useState(0)
-    // console.log(time);
     const [titles, setTitle] = useState([])
-    // let setTitle = [];
     // console.log(title);
     
     return (

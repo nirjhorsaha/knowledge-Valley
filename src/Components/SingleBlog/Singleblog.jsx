@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Singleblog = ({ blog, setTime, setTitle }) => {
-    // console.log(props.blog.time);
     const { name, title, img, time, date, avatar } = blog;
 
     const handleTime = (time) => {
@@ -12,7 +11,7 @@ const Singleblog = ({ blog, setTime, setTitle }) => {
     }
 
     const handleTitles = (title) => {
-        setTitle(oldArray => [...oldArray, title])
+        setTitle(prevTitle => [...prevTitle, title])
     }
 
     return (
